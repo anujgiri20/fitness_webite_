@@ -71,4 +71,4 @@ function Carsoul1() {
     </div>
     );
   }
-  
+  export default Carsoul1;

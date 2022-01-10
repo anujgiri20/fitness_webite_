@@ -1,0 +1,168 @@
+.loginForm
+{  
+background-color:rgba(95,55,40,0.6);
+padding:50px;
+width:30%;
+margin:auto;
+
+padding-bottom:100px;
+
+border-radius: 20px;
+font-weight: bolder;
+
+margin-top:50px;
+
+border:0.3px solid white;
+position: relative;
+z-index: 1;
+}
+
+ .inputlogin{
+    width: 60%;
+    text-align: center;
+    font-family: "Cormorant Garamond",serif;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    margin:5px;
+    margin-left:0px;
+    width:100%;
+    text-align: center;
+    margin-bottom:10px;
+    outline:0;
+
+}
+.headinglogin
+{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.029em;
+    font-weight: 900;
+    font-size: 3rem;
+    text-align: center;
+    
+}
+ .headinglogin1{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.029em;
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    
+        background: url(https://i.gifer.com/7Pv.gif);
+        -webkit-background-clip: text; 
+        padding-bottom:50px;
+ }
+
+.p_tag{
+    color:white;
+    text-align: center;
+    font-weight: lighter;
+    margin-top:40px;
+    font-size: 1.2rem;
+}
+
+.logindiv{
+    background-color:#e9d1ca;
+    padding-bottom:100px;
+    background-image: url("https://images.hdqwalls.com/download/dwayne-johnson-workout-new-2048x1152.jpg");
+    background-repeat: no-repeat;
+   
+    background-position:center;
+    background-size:cover;
+   }
+
+
+@media only screen and (max-width:1260px)
+{
+.loginForm{
+    width:60%;
+}
+
+}
+.logindiv{
+ background-color:#e9d1ca;
+ padding-bottom:200px;
+ background-image: url("https://images.hdqwalls.com/download/dwayne-johnson-workout-new-2048x1152.jpg");
+ background-repeat: no-repeat;
+
+ background-position:center;
+ background-size:cover;
+}
+.btn
+{
+    background-color:#e9d1ca;
+    font-family: "Cormorant Garamond",serif;
+    margin-top:10px;
+   
+  height: 40px;
+    color:white;
+}
+.btn:hover{
+    color:white;
+    background: url(https://media.giphy.com/media/zD4ilw8CStDry/giphy.gif);
+border:0px;
+height: 40px;
+}
+
+
+
+@media only screen and (max-width:800px)
+{
+.loginForm{
+    width:90%;
+    margin-top:100px;
+}
+.headinglogin
+{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.029em;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+ .headinglogin1{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.019em;
+    font-weight: 900;
+    font-size: 1.9rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    
+        background: url(https://i.gifer.com/7Pv.gif);
+        -webkit-background-clip: text; 
+        padding-bottom:50px;
+ }
+}
+
+.carsoul_login{
+    background-color: transparent;
+ width:50%;
+ position: absolute;
+   z-index: 0;
+
+}
+
+.icon_icon{
+    width:15%;
+    margin:5px;
+}
+.icon_icon:hover{
+    background-color: tomato;
+}
+.icon_icon:hover{
+
+}
+.icon_div{
+    background-color: transparent;
+    padding-top:20px;
+    padding-bottom:20px;
+    border:1px solid white;
+    margin-top:20px;
+    transition: 2s;
+
+}

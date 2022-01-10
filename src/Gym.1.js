@@ -1,4 +1,4 @@
-
+import { useHistory } from "react-router";
 // gym exercies
 // gym exercies start
 function Gym() {
@@ -11,7 +11,8 @@ function Gym() {
   const [Abdominal_data, setAbdominaldata] = useState([]);
   const [Combined_data, setCombineddata] = useState([]);
   const [Cardio_data, setCardiodata] = useState([]);
-
+const history = useHistory()
+const [toggle,settoggle] = useState(false)
   //chest hook
  
   useEffect(() => {
@@ -20,6 +21,7 @@ function Gym() {
         .then((data) => data.json())
         .then((newdata) => setdata(newdata));
     };
+    
     getData();
 
 
@@ -132,7 +134,12 @@ function Gym() {
     Cardiodata();
 
   }, []);
+
+
+  
   return (
+    <>
+   
     <div className="App">
       <div>
         <div className="link_gym">
@@ -234,6 +241,8 @@ function Gym() {
 
 
     </div>
+  
+    </>
   );
 }
 function Chest({ name, value, img, link, steps, tips, id }) {

@@ -1,7 +1,17 @@
 .App {
   text-align: center;
 }
-
+.button_logout:hover{
+  border:0px;
+  border-radius: 0px;
+  outline: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.button_logout{
+  outline: none !important;
+  box-shadow: none !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

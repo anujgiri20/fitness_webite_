@@ -15,6 +15,7 @@ export function Yoga() {
       Yogadata();
     }, []);
     const deletUser = (id) => {
+      alert("Processing")
       fetch(`https://capstoneproject1299.herokuapp.com/deleteyoga/`+id,
         { method: "DELETE" }).then(() => Yogadata())
         console.log("deleted")

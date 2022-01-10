@@ -27,7 +27,7 @@ export function Circle_text() {
             <use xlinkHref="#circlePath" fill="none" />
             <text fill="#000">
               <textPath xlinkHref="#circlePath">
-                Text rotating around a circle path with SVG!
+              Eat , Sleep , Workout , Repeat , Eat ,Sleep
               </textPath>
             </text>
           </g>

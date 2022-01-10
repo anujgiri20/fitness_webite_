@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
+import { useHistory } from 'react-router';
 import './App.css';
+import Axios from 'axios';
 import Carsoul from "./Carsoul"
 import ReactPlayer from "react-player"
 import Flip_card from './Flip_card';
@@ -26,13 +28,24 @@ import { EditLeg } from './EditLeg';
 import { EditCombined } from './EditCombined';
 import { EditCardio } from './EditCardio';
 import {EditAbdominal} from "./EditAbdominal"
-import styled from "styled-components";
-import HighlightIcon from "@material-ui/icons/Highlight";
+import {Loginuser} from './Login';
+import Carsoul1 from "./last_container";
+import icon from "./img/user.png"
+
+
 // import {Insert} from "./insertda
 
-function App() {
+ function App() {
   const [toggle, toggleNav] = useState(false);
   const [navbar, setnavbar] = useState(false)
+const history = useHistory()
+
+const logout=()=>{
+localStorage.removeItem("access-token")
+localStorage.removeItem("username")
+history.push("/")
+
+}
 
 
   return (
@@ -45,16 +58,25 @@ function App() {
   </div>
       <div className="navbar">
 
-        <div className="navbar_title">
-          <h4 className="navbar_text animate-charcter1">
-           FitnessLab
+        <div style={{
+          display:"flex",
+          columnGap:"10px",
+          marginTop:"0px"
+        }} className="navbar_title">
+        <img src={icon} style={{
+             width:"30px"
+             
+            }} /> 
+          <h4  className="navbar_text animate-charcter1">
+           
+            {localStorage.getItem("username")}
           </h4>
         </div>
         <div className={navbar ? "navbar_link navbar_mobile_view" : "navbar_link"} >
           <ul className="ul">
 
             <li>
-              <Link  className="a_tag" to="/">Home</Link>
+              <Link  className="a_tag" to="/home">Home</Link>
             </li>
             <li>
               <Link className="a_tag" to="/gympath">Gym</Link>
@@ -71,6 +93,20 @@ function App() {
             <li>
               <Link className="a_tag" to="/dietplan">Blog</Link>
             </li>
+            <li>
+              <button
+              className='button_logout'
+              style={{
+                backgroundColor:"transparent",
+                border:"0px",
+                fontSize:"1.1rem",
+                color:"white",
+                fontFamily: "Cormorant Garamond, serif",
+                paddingLeft:"0px"
+
+              }}
+              onClick={logout}>Logout</button>
+            </li>
           </ul>
 
         </div>
@@ -81,38 +117,40 @@ function App() {
         </div>
       </div>
       <div>
+      
 
         <Switch>
 
-          <Route exact path="/">
+          <Route exact path="/home">
             <Homepage />
           </Route>
 
-          <Route path="/gympath">
+          <Route exact path="/gympath">
             <Router>
             <Gym />
             </Router>
           </Route>
 
-          <Route path="/yoga">
+          <Route exact path="/yoga">
             <Yoga />
           </Route>
 
-          <Route path="/insertdata">
+          <Route exact path="/insertdata">
             <Insertdata />
           </Route>
 
 
-          <Route path="/bmi">
+          <Route exact path="/bmi">
             <BMI />
           </Route>
         </Switch>
 
 
-        <Route path="/dietplan">
+        <Route exact path="/dietplan">
             <Diet />
           </Route>
  
+          
  
 
 
@@ -121,14 +159,15 @@ function App() {
     </>
   );
 }
-export default App;
 
+export default App
 
 
 
 
 
 function Homepage() {
+  
   return (
     <>
     {/* animate-charcter */}
@@ -188,13 +227,13 @@ function Homepage() {
 
 
 function Gym() {
+  const history =useHistory()
 const [gym,setgym] = useState(true)
-
-
+console.log(localStorage.getItem("login-status"))
   return (
     <>
 
-    
+   
 
     <div >
       <div>
@@ -258,6 +297,7 @@ const [gym,setgym] = useState(true)
 
 
     </div>
+   
     </>
   );
 }
