@@ -9,7 +9,7 @@ import {Main} from "./Login"
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <Main />
+    <App />
 
     </Router>
   </React.StrictMode>,
